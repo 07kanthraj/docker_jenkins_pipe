@@ -10,6 +10,8 @@ public class App
     {
         System.out.println( "Hello World!" );
         System.out.println("This is new change to test the auto build trigger");
+        System.out.println("This is new change to test the auto build trigger");
+
     }
 }
 

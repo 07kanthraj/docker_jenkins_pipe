@@ -18,12 +18,12 @@ pipeline {
             }
         }
     }
-    stage('push docker image to docker hub'){
+        stage('push docker image to docker hub'){
         steps{
             script{
-                withCredentials([file(credentialsId: '', variable: 'dockerlogin')]) {
+withCredentials([string(credentialsId: 'newlogindocker', variable: 'newlogindocker')]) {
 }
-                sh 'docker login -u 07kanthraj -p ${dockerlogin}'
+                sh 'docker login -u 07kanthraj -p ${newlogindocker}'
                 sh 'docker push 07kanthraj/docker_jenkins_pipe'
             }
         }
